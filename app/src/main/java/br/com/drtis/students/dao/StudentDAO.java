@@ -19,7 +19,7 @@ import br.com.drtis.students.model.Student;
 public class StudentDAO extends SQLiteOpenHelper {
 
     public StudentDAO(Context context) {
-        super(context, "test", null, 3);
+        super(context, "test", null, 1);
     }
 
     @Override
@@ -30,19 +30,20 @@ public class StudentDAO extends SQLiteOpenHelper {
                 "address TEXT, " +
                 "telephone TEXT, " +
                 "site TEXT, " +
-                "grade REAL" +
+                "grade REAL, " +
                 "photoPath TEXT)";
         db.execSQL(sql);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        switch (oldVersion) {
-            case 1:
-            case 2:
-                String sql = "ALTER TABLE student ADD COLUMN photoPath TEXT";
-                db.execSQL(sql);
-        }
+//        db.execSQL("DROP TABLE test;");
+//        switch (oldVersion) {
+//            case 1:
+//            case 2:
+//                String sql = "ALTER TABLE student ADD COLUMN photoPath TEXT";
+//                db.execSQL(sql);
+//        }
     }
 
     public void insert(Student student) {

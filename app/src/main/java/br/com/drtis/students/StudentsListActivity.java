@@ -14,12 +14,10 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ListView;
-import android.widget.Toast;
 
 import java.util.List;
 
 import br.com.drtis.students.adapter.StudentsAdapter;
-import br.com.drtis.students.converter.StudentConverter;
 import br.com.drtis.students.model.Student;
 import br.com.drtis.students.dao.StudentDAO;
 
@@ -134,8 +132,12 @@ public class StudentsListActivity extends AppCompatActivity {
                 new SendStudentsTask(this).execute();
                 break;
             case R.id.menu_list_exams:
-                Intent goToExams = new Intent(this, ExamActivity.class);
+                Intent goToExams = new Intent(this, ExamListActivity.class);
                 startActivity(goToExams);
+                break;
+            case R.id.menu_list_map:
+                Intent goToMap = new Intent(this, MapsActivity.class);
+                startActivity(goToMap);
                 break;
         }
         return super.onOptionsItemSelected(item);

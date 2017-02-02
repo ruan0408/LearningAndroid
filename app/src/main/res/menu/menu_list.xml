@@ -12,4 +12,10 @@
         android:title="Exams"
         android:icon="@drawable/cloud_download"
         app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_list_map"
+        android:title="View on map"
+        android:icon="@drawable/map"
+        app:showAsAction="always"/>
 </menu>
