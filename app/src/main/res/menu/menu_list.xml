@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_list_send"
+        android:title="Send grades"
+        android:icon="@drawable/cloud_icon"
+        app:showAsAction="always"/>
+
+    <item
+        android:id="@+id/menu_list_exams"
+        android:title="Exams"
+        android:icon="@drawable/cloud_download"
+        app:showAsAction="always"/>
+</menu>
